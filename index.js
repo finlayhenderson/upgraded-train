@@ -20,16 +20,6 @@ client.on('message', async message => {
             .addField(`Cases`, covidStats.cases)
             .addField(`Deaths`, covidStats.deaths)
             .addField(`Recovered`, covidStats.recovered)
-            .addField(`---`, ` `)
-            .addField(`Cases Today`, covidStats.todayCases)
-            .addField(`Deaths Today`, covidStats.todayDeaths)
-            .addField(`Recovered Today`, covidStats.todayRecovered)
-            //.setThumbnail(client.avatarURL())
-            //.addFields(
-                // {name: `Cases`, value: covidStats.cases, inline: false},
-                // {name: `Cases Today`, value: covidStats.todayCases, inline: false},
-                // {name: `Deaths`, value: covidStats.deaths, inline: false},
-                // {name: `Deaths Today`, value: covidStats.todayDeaths, inline: false},
             .setFooter(`COVID-19 Tracker | V1.0.0`)
         )
     }
