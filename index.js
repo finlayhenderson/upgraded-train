@@ -8,8 +8,8 @@ const TOKEN = process.env.TOKEN
 const PREFIX = process.env.PREFIX
 
 client.on('ready', () => 
-    console.log('Tracking COVID-19...'),
-    client.user.setPresence({ game: { name: 'c?covid', type: "playing"}})
+    console.log('Tracking COVID-19...')
+    //client.user.setPresence({ game: { name: 'c?covid', type: "playing"}})
 )
 
 client.on('message', async message => {
