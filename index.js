@@ -33,6 +33,15 @@ client.on('message', async message => {
             .setFooter(`COVID-19 Tracker | V1.0.0`)
         )
     }
+
+    if (message.content.startsWith(`${PREFIX}testembed`)) {
+        return message.channel.send(new Discord.MessageEmbed() 
+            .setTitle(`Embed Test`)
+            .setColor("RED")
+            .setFooter(`COVID-19 Tracker | V1.0.0`)
+            .setTimestamp()
+        )
+    }
 })
 
 client.login(TOKEN)
