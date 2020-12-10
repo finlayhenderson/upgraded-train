@@ -7,7 +7,10 @@ require('dotenv').config()
 const TOKEN = process.env.TOKEN
 const PREFIX = process.env.PREFIX
 
-client.on('ready', () => console.log('Tracking COVID-19...'))
+client.on('ready', () => 
+    console.log('Tracking COVID-19...'),
+    client.user.setPresence({ game: { name: 'c?covid', type: "playing"}})
+)
 
 client.on('message', async message => {
     if (message.content.startsWith(`${PREFIX}covid`)) {
@@ -25,6 +28,8 @@ client.on('message', async message => {
     }
 
     if (message.content.startsWith(`${PREFIX}testembed`)) {
+        
+        console.log(`Sending Test Embed`)
         return message.channel.send(new Discord.MessageEmbed() 
             .setTitle(`Embed Test`)
             .setColor("RED")
